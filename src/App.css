@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+.container {
+  margin: 50px;
+}
+
+.btn-info {
+  margin: 15px;
+}
+
+h1 {
+  margin: 50px 0 50px 0 !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
