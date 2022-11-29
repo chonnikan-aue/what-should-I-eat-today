@@ -1,0 +1,47 @@
+Chonnikan - What should I eat today?
+
+## Project Choice (Tell us what API you're using!)
+
+https://www.themealdb.com/api.php
+
+## Project Description 
+> A short description of your project.
+
+random menu for don't-know-what-to-eat people
+
+## Wire Frames
+> Copy and paste or drag and drop your images here.
+
+## User Stories
+> Add user stories following the _As a [type of user], I want [what the user wants], so that [what it helps accomplish]_ format.
+
+- As a user, I don't know what to eat today, so I random a menu from api.
+
+- As a user, I think maybe I don't want to eat the first random menu, so I will choose from 12 random menus (6 rounds) and the last menu will be chosen
+
+- As a user, I want the web show me the recipe, so I can cook myself
+
+- As a user, maybe I have category in my mind but I don't know what exactly menu, so I will make it random from category
+
+### MVP Goals
+
+1. can random food from api
+2. can choose menu from random menu list
+3. show recipe from random menu
+4. show youtube link that go to recipe video (if it have)
+
+
+### Stretch Goals
+
+first
+- random menu from category (14 category from https://www.themealdb.com/api/json/v1/1/categories.php)
+- random menu from country (26 country + unknown(maybe don't use) from https://www.themealdb.com/api/json/v1/1/list.php?a=list
+
+second
+- show embeded recipe video from youtube (if it have)
+
+third
+- have bg song during cooking/see recipe
+
+fourth
+- have bg song lyrics using api (?)
