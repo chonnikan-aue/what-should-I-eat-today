@@ -7,10 +7,18 @@ const FoodList = (props) => {
   return (
     <Row>
       <Col>
-        <Food></Food>
+        <Food
+          chosenFood={props.chosenFood}
+          setChosenFood={props.setChosenFood}
+          foodNum={0}
+        ></Food>
       </Col>
       <Col>
-        <Food></Food>
+        <Food
+          chosenFood={props.chosenFood}
+          setChosenFood={props.setChosenFood}
+          foodNum={1}
+        ></Food>
       </Col>
     </Row>
   );

@@ -8,7 +8,8 @@ import FoodList from "./FoodList";
 
 const Random = () => {
   let [chosenFood, setChosenFood] = useState([]);
-  let foodNum = -1;
+  let [foodList, setFoodList] = useState([]);
+  let [foodNum, setFoodNum] = useState(0);
 
   const randomFood = () => {
     axios
@@ -17,13 +18,16 @@ const Random = () => {
         const data = res.data.meals[0];
         console.log(data);
         setChosenFood([
-          ...chosenFood,
+          ...chosenFood.slice(0, foodNum),
           {
-            foodNum: foodNum + 1,
+            foodNum: foodNum,
             foodId: data.idMeal,
             foodPic: data.strMealThumb,
+            foodName: data.strMeal,
           },
+          ...chosenFood.slice(foodNum + 1),
         ]);
+        setFoodNum(foodNum + 1);
       })
       .catch((err) => {
         console.log(err);
@@ -32,23 +36,31 @@ const Random = () => {
 
   useEffect(() => {
     if (chosenFood.length === 0) {
-      console.log("dd");
+      console.log("begin");
       randomFood();
     }
-    console.log("ss");
-    randomFood();
-    foodNum = -1;
-  }, []);
+    return () => {
+      if (chosenFood.length < 2) {
+        console.log("second dish");
+        randomFood();
+      } else {
+        console.log("show pic", chosenFood);
+        setFoodList(
+          <FoodList
+            chosenFood={chosenFood}
+            setChosenFood={setChosenFood}
+          ></FoodList>
+        );
+      }
+    };
+  }, [chosenFood]);
 
   return (
     <Container>
       <Row>
         <Header></Header>
       </Row>
-      <FoodList
-        chosenFood={chosenFood}
-        setChosenFood={setChosenFood}
-      ></FoodList>
+      {foodList}
     </Container>
   );
 };

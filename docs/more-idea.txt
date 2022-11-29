@@ -1,0 +1,15 @@
+--1. Have random menu for eating
+--2. After random menu show recipe for that menu
+--3. Have picture for the random menu
+4. Get random music (button in menu recipe maybe modal, so it can go back to look at recipe) (stetch goal 1 maybe just mp3) (stetch goal 2 use api)
+5. from 4., Have lyrics for that song
+6. After random menu show near restaurant from category
+7. search by ingredient in house
+--8. can choose category (14 category https://www.themealdb.com/api/json/v1/1/categories.php)
+--9. can choose from country (26+unknown)
+10. can choose from ingredient (stretch or not do)
+--11. show video from youtube (depends, mvp: just link, stretch: embeded video)
+
+
+fifth
+- show near restuarant that have this random menu using google find places api (?)
