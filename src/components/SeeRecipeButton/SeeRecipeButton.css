@@ -1,4 +1,4 @@
-button {
+.see-recipe-btn {
   position: absolute;
   top: 50%;
   transform: translatex(-60%);
