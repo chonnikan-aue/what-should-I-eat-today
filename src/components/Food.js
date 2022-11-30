@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
-import { Col } from "react-bootstrap";
 
 const Food = (props) => {
   let food = props.chosenFood[props.foodNum];
