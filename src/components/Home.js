@@ -12,16 +12,22 @@ const Home = (props) => {
         <Header headerText={props.headerText}></Header>
       </Row>
       <Row>
-        <Link to="/random">
-          <Button type="button" variant="info" size="lg">
-            Random me anything!
-          </Button>
-        </Link>
-        <Link to="/category">
-          <Button type="button" variant="info" size="lg">
-            I want to eat...
-          </Button>
-        </Link>
+        <div>
+          <Link to="/random">
+            <Button type="button" variant="info" size="lg">
+              Random me anything!
+            </Button>
+          </Link>
+        </div>
+      </Row>
+      <Row>
+        <div>
+          <Link to="/category">
+            <Button type="button" variant="info" size="lg">
+              I want to eat...
+            </Button>
+          </Link>
+        </div>
       </Row>
     </Container>
   );
