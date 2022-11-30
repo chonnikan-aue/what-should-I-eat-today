@@ -53,7 +53,7 @@ const Food = (props) => {
   };
 
   return (
-    <Col>
+    <div>
       {food ? (
         <img
           ref={foodImg}
@@ -62,7 +62,7 @@ const Food = (props) => {
           onClick={selectedFood}
         />
       ) : null}
-    </Col>
+    </div>
   );
 };
 

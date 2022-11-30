@@ -1,0 +1,5 @@
+button {
+  position: absolute;
+  top: 50%;
+  transform: translatex(-60%);
+}
