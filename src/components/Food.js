@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Col } from "react-bootstrap";
 
 const Food = (props) => {
   let food = props.chosenFood[props.foodNum];
@@ -50,11 +51,11 @@ const Food = (props) => {
   };
 
   return (
-    <div>
+    <Col>
       {food ? (
         <img src={food.foodPic} alt={food.foodName} onClick={selectedFood} />
       ) : null}
-    </div>
+    </Col>
   );
 };
 

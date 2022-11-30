@@ -1,6 +1,5 @@
 import React from "react";
 import Food from "./Food";
-import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { useState } from "react";
 
@@ -9,24 +8,28 @@ const FoodList = (props) => {
 
   return (
     <Row>
-      <Col>
-        <Food
-          chosenFood={props.chosenFood}
-          setChosenFood={props.setChosenFood}
-          foodNum={0}
-          count={count}
-          setCount={setCount}
-        ></Food>
-      </Col>
-      <Col>
-        <Food
-          chosenFood={props.chosenFood}
-          setChosenFood={props.setChosenFood}
-          foodNum={1}
-          count={count}
-          setCount={setCount}
-        ></Food>
-      </Col>
+      {props.chosenFood[0] && props.chosenFood[1] ? (
+        <Row>
+          {Object.keys(props.chosenFood[0]).length !== 0 ? (
+            <Food
+              chosenFood={props.chosenFood}
+              setChosenFood={props.setChosenFood}
+              foodNum={0}
+              count={count}
+              setCount={setCount}
+            ></Food>
+          ) : null}
+          {Object.keys(props.chosenFood[1]).length !== 0 ? (
+            <Food
+              chosenFood={props.chosenFood}
+              setChosenFood={props.setChosenFood}
+              foodNum={1}
+              count={count}
+              setCount={setCount}
+            ></Food>
+          ) : null}
+        </Row>
+      ) : null}
     </Row>
   );
 };
