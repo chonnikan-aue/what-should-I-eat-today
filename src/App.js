@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Random from "./components/Random";
 import Home from "./components/Home";
 import HamburgerMenu from "./components/HamburgerMenu/HamburgerMenu";
+import Recipe from "./components/Recipe/Recipe";
 
 const App = () => {
   let [headerText, setHeaderText] = useState("What should I eat today?");
@@ -19,7 +20,7 @@ const App = () => {
             <Random headerText={headerText} setHeaderText={setHeaderText} />
           }
         />
-        <Route path="/recipe/:foodId" element={<Random />} />
+        <Route path="/recipe/:foodId" element={<Recipe  />} />
         <Route path="/test" element={<HamburgerMenu />} />
       </Routes>
     </div>
