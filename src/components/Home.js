@@ -5,11 +5,11 @@ import Header from "./Header";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <Container>
       <Row>
-        <Header></Header>
+        <Header headerText={props.headerText}></Header>
       </Row>
       <Row>
         <Link to="/random">

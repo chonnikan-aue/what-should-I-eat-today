@@ -6,9 +6,8 @@ import { useState } from "react";
 import axios from "axios";
 import FoodList from "./FoodList";
 
-const Random = () => {
+const Random = (props) => {
   let [chosenFood, setChosenFood] = useState([]);
-  let [headerText, setHeaderText] = useState("What should I eat today?");
   const randomFood = () => {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -36,12 +35,12 @@ const Random = () => {
   return (
     <Container>
       <Row>
-        <Header headerText={headerText} />
+        <Header headerText={props.headerText} />
       </Row>
       <FoodList
         chosenFood={chosenFood}
         setChosenFood={setChosenFood}
-        setHeaderText={setHeaderText}
+        setHeaderText={props.setHeaderText}
       />
     </Container>
   );
