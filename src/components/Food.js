@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { Col } from "react-bootstrap";
 
@@ -8,6 +8,7 @@ const Food = (props) => {
     return num !== props.foodNum;
   });
   let [data, setData] = useState({});
+  const foodImg = useRef();
 
   const randomFoodTemp = () => {
     axios
@@ -47,13 +48,19 @@ const Food = (props) => {
           [indexLeft]: {},
         })
       );
+      foodImg.current.classList.add("chosen-food");
     }
   };
 
   return (
     <Col>
       {food ? (
-        <img src={food.foodPic} alt={food.foodName} onClick={selectedFood} />
+        <img
+          ref={foodImg}
+          src={food.foodPic}
+          alt={food.foodName}
+          onClick={selectedFood}
+        />
       ) : null}
     </Col>
   );

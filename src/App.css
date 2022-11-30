@@ -15,37 +15,23 @@ h1 {
 }
 
 img {
-  max-width: 200px;
-  padding-bottom: 20px;
+  max-width: 300px;
+  padding-bottom: 40px;
   border-radius: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .chosen-food {
+    animation: chosen-food-zoom 0.4s linear;
+    max-width: 350px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes chosen-food-zoom {
   from {
-    transform: rotate(0deg);
+    max-width: 300px;
   }
   to {
-    transform: rotate(360deg);
+    max-width: 350px;
   }
 }
