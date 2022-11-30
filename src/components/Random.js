@@ -18,16 +18,14 @@ const Random = () => {
         const data = res.data.meals[0];
         console.log(data);
         setChosenFood([
-          ...chosenFood.slice(0, foodNum),
+          ...chosenFood,
           {
             foodNum: foodNum,
             foodId: data.idMeal,
             foodPic: data.strMealThumb,
             foodName: data.strMeal,
           },
-          ...chosenFood.slice(foodNum + 1),
         ]);
-        setFoodNum(foodNum + 1);
       })
       .catch((err) => {
         console.log(err);
@@ -35,25 +33,50 @@ const Random = () => {
   };
 
   useEffect(() => {
-    if (chosenFood.length === 0) {
-      console.log("begin");
+    setFoodNum(foodNum + 1);
+    randomFood();
+    return () => {
+      console.log("first", chosenFood);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (chosenFood.length < 1) {
+      setFoodNum(foodNum + 1);
       randomFood();
     }
     return () => {
-      if (chosenFood.length < 2) {
-        console.log("second dish");
-        randomFood();
-      } else {
-        console.log("show pic", chosenFood);
-        setFoodList(
-          <FoodList
-            chosenFood={chosenFood}
-            setChosenFood={setChosenFood}
-          ></FoodList>
-        );
-      }
+      console.log("chosenFOod updated", chosenFood);
     };
   }, [chosenFood]);
+
+  useEffect(() => {
+    return () => {
+      console.log("chosenFOod updated", chosenFood);
+    };
+  }, [foodNum]);
+
+  // useEffect(() => {
+  //   console.log("use effect");
+  //   if (chosenFood.length === 0) {
+  //     console.log("begin");
+  //     randomFood();
+  //   }
+  //   return () => {
+  //     if (chosenFood.length < 2) {
+  //       console.log("second dish");
+  //       randomFood();
+  //     } else {
+  //       console.log("show pic", chosenFood);
+  //       setFoodList(
+  //         <FoodList
+  //           chosenFood={chosenFood}
+  //           setChosenFood={setChosenFood}
+  //         ></FoodList>
+  //       );
+  //     }
+  //   };
+  // }, [chosenFood]);
 
   return (
     <Container>
