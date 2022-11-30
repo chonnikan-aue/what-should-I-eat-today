@@ -8,7 +8,7 @@ import FoodList from "./FoodList";
 
 const Random = () => {
   let [chosenFood, setChosenFood] = useState([]);
-
+  let [headerText, setHeaderText] = useState("What should I eat today?");
   const randomFood = () => {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -36,9 +36,13 @@ const Random = () => {
   return (
     <Container>
       <Row>
-        <Header></Header>
+        <Header headerText={headerText} />
       </Row>
-      <FoodList chosenFood={chosenFood} setChosenFood={setChosenFood} />
+      <FoodList
+        chosenFood={chosenFood}
+        setChosenFood={setChosenFood}
+        setHeaderText={setHeaderText}
+      />
     </Container>
   );
 };

@@ -1,12 +1,17 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import './SeeRecipeButton.css'
+import { Link } from "react-router-dom";
+import "./SeeRecipeButton.css";
 
-const SeeRecipeButton = () => {
+const SeeRecipeButton = (props) => {
+  props.setHeaderText(`You chose ${props.chosenFood.foodName}!`);
+
   return (
-    <Button type="button" variant="info" size="lg">
-      See Recipe
-    </Button>
+    <Link to={`/recipe/${props.chosenFood.foodId}`}>
+      <Button type="button" variant="info" size="lg">
+        See Recipe
+      </Button>
+    </Link>
   );
 };
 

@@ -22,7 +22,10 @@ const FoodList = (props) => {
                 setCount={setCount}
               ></Food>
               {Object.keys(props.chosenFood[1]).length === 0 ? (
-                <SeeRecipeButton />
+                <SeeRecipeButton
+                  setHeaderText={props.setHeaderText}
+                  chosenFood={props.chosenFood[0]}
+                />
               ) : null}
             </Col>
           ) : null}
@@ -36,7 +39,10 @@ const FoodList = (props) => {
                 setCount={setCount}
               ></Food>
               {Object.keys(props.chosenFood[0]).length === 0 ? (
-                <SeeRecipeButton />
+                <SeeRecipeButton
+                  setHeaderText={props.setHeaderText}
+                  chosenFood={props.chosenFood[1]}
+                />
               ) : null}
             </Col>
           ) : null}
