@@ -16,14 +16,26 @@ h1 {
 
 img {
   max-width: 300px;
-  padding-bottom: 40px;
-  border-radius: 100%;
+  margin-bottom: 40px;
+  border-radius: 50%;
+}
+
+img:active {
+  -webkit-mask-box-image: url(https://whatemoji.org/wp-content/uploads/2020/07/Growing-Heart-Emoji.png)
+    5 stretch;
+}
+
+img:hover {
+  border-color: #dd2e44;
+  box-shadow: 0 0 30px #dd2e44;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .chosen-food {
     animation: chosen-food-zoom 0.4s linear;
     max-width: 350px;
+    border-color: #dd2e44;
+    box-shadow: 0 0 30px #dd2e44;
   }
 }
 
