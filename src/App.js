@@ -1,15 +1,15 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link, Routes, Route } from "react-router-dom";
-import Main from "./components/Main";
+import { Routes, Route } from "react-router-dom";
 import Random from "./components/Random";
+import Home from "./components/Home";
 
 const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Main></Main>} />
-        <Route path="/random" element={<Random></Random>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/random" element={<Random />} />
       </Routes>
     </div>
   );
