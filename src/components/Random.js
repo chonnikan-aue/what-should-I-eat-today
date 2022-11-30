@@ -8,8 +8,6 @@ import FoodList from "./FoodList";
 
 const Random = () => {
   let [chosenFood, setChosenFood] = useState([]);
-  let [foodList, setFoodList] = useState([]);
-  let [foodNum, setFoodNum] = useState(0);
 
   const randomFood = () => {
     axios
@@ -20,7 +18,6 @@ const Random = () => {
         setChosenFood((prevState) => [
           ...prevState,
           {
-            foodNum: foodNum,
             foodId: data.idMeal,
             foodPic: data.strMealThumb,
             foodName: data.strMeal,
@@ -32,57 +29,9 @@ const Random = () => {
       });
   };
 
-  // useEffect(() => {
-  //   setFoodNum(foodNum + 1);
-  //   randomFood();
-  //   return () => {
-  //     console.log("first", chosenFood);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   if (chosenFood.length < 1) {
-  //     setFoodNum(foodNum + 1);
-  //     randomFood();
-  //   }
-  //   return () => {
-  //     console.log("chosenFOod updated", chosenFood);
-  //   };
-  // }, [chosenFood]);
-
-  // useEffect(() => {
-  //   return () => {
-  //     console.log("chosenFOod updated", chosenFood);
-  //   };
-  // }, [foodNum]);
-
   useEffect(() => {
-    console.log("use effect");
-    if (chosenFood.length === 0) {
-      console.log("begin");
-      randomFood();
-      randomFood();
-    }
-    // setFoodList(
-    //         <FoodList
-    //           chosenFood={chosenFood}
-    //           setChosenFood={setChosenFood}
-    //         ></FoodList>
-    //       );
-    // return () => {
-    //   if (chosenFood.length < 2) {
-    //     console.log("second dish");
-    //     randomFood();
-    //   } else {
-    //     console.log("show pic", chosenFood);
-    //     setFoodList(
-    //       <FoodList
-    //         chosenFood={chosenFood}
-    //         setChosenFood={setChosenFood}
-    //       ></FoodList>
-    //     );
-    //   }
-    // };
+    randomFood();
+    randomFood();
   }, []);
 
   return (
@@ -90,11 +39,7 @@ const Random = () => {
       <Row>
         <Header></Header>
       </Row>
-      {/* {foodList} */}
-      <FoodList
-              chosenFood={chosenFood}
-              setChosenFood={setChosenFood}
-            />
+      <FoodList chosenFood={chosenFood} setChosenFood={setChosenFood} />
     </Container>
   );
 };
