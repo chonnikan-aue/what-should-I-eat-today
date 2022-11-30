@@ -1,14 +1,22 @@
 import React, { useEffect } from "react";
 
 const Food = (props) => {
-  let food = props.chosenFood[props.foodNum];
+  let food = props.chosenFood;
   const selectedFood = () => {
     props.setChosenFood(
       Object.assign([], props.chosenFood, { [props.foodNum]: food })
     );
   };
+
+
   return (
-    <img src={food.foodPic} alt={food.foodName} onClick={selectedFood}></img>
+    <div>
+      { food ? 
+        <img src={food.foodPic} alt={food.foodName} onClick={selectedFood} />
+      :
+      null
+    }
+    </div>
   );
 };
 

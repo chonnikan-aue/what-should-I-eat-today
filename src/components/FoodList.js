@@ -8,14 +8,14 @@ const FoodList = (props) => {
     <Row>
       <Col>
         <Food
-          chosenFood={props.chosenFood}
+          chosenFood={props.chosenFood[0]}
           setChosenFood={props.setChosenFood}
           foodNum={0}
         ></Food>
       </Col>
       <Col>
         <Food
-          chosenFood={props.chosenFood}
+          chosenFood={props.chosenFood[1]}
           setChosenFood={props.setChosenFood}
           foodNum={1}
         ></Food>
