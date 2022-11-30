@@ -5,7 +5,7 @@ import Header from "./Header";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 
-const Main = () => {
+const Home = () => {
   return (
     <Container>
       <Row>
@@ -27,4 +27,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Home;
