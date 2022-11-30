@@ -14,7 +14,6 @@ const Random = () => {
       .get("https://www.themealdb.com/api/json/v1/1/random.php")
       .then((res) => {
         const data = res.data.meals[0];
-        console.log(data);
         setChosenFood((prevState) => [
           ...prevState,
           {
