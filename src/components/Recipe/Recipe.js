@@ -1,11 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
 import Header from "../Header";
-import Ratio from "react-bootstrap/Ratio";
 import "./Recipe.css";
+import { Container, Col, Row, Button, Ratio } from "react-bootstrap";
 
 const Recipe = (props) => {
   const foodId = useParams().foodId;
@@ -64,19 +62,18 @@ const Recipe = (props) => {
 
   return (
     <Container>
-      <Row>
+      <img id="recipe-img" src={recipe.foodPic} alt={recipe.foodName} />
+      <Row id="recipe-header">
         <Header headerText={props.headerText}></Header>
       </Row>
       <Row>
-        <p>
-          <strong>Category: </strong>
-          {recipe.foodCategory}
-        </p>
-      </Row>
-      <Row>
-        <p>
-          <strong>Country: </strong>
-          {recipe.foodCountry}
+        <p className="recipe-btn-container">
+          <Button className="recipe-btn" type="button" variant="dark">
+            {recipe.foodCategory}
+          </Button>
+          <Button className="recipe-btn" stype="button" variant="dark">
+            {recipe.foodCountry}
+          </Button>
         </p>
       </Row>
       {recipe.foodYoutubeLink ? (
@@ -93,25 +90,27 @@ const Recipe = (props) => {
           </Ratio>
         </Row>
       ) : null}
-      <Row>
-        <Row>
-          <p>
-            <strong>Ingredients: </strong>
-          </p>
-        </Row>
-        <Row>
-          <ol>{ingredientsList}</ol>
-        </Row>
-      </Row>
-      <Row>
-        <Row>
-          <p>
-            <strong>Instructions: </strong>
-          </p>
-        </Row>
-        <Row>
-          <ol>{instructionsList}</ol>
-        </Row>
+      <Row id="recipe-detail">
+        <Col>
+          <Row>
+            <p>
+              <strong>Ingredients: </strong>
+            </p>
+          </Row>
+          <Row>
+            <ol>{ingredientsList}</ol>
+          </Row>
+        </Col>
+        <Col>
+          <Row>
+            <p>
+              <strong>Instructions: </strong>
+            </p>
+          </Row>
+          <Row>
+            <ol>{instructionsList}</ol>
+          </Row>
+        </Col>
       </Row>
     </Container>
   );

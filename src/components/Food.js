@@ -55,6 +55,7 @@ const Food = (props) => {
     <div>
       {food ? (
         <img
+          className="random-img"
           ref={foodImg}
           src={food.foodPic}
           alt={food.foodName}

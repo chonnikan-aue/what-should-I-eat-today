@@ -1,32 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Zilla+Slab+Highlight&display=swap");
+
+html {
+  background: rgb(255, 173, 173);
+  z-index: -10;
+  overflow-x: hidden;
+}
+
 .App {
+  background: rgb(255, 173, 173);
   text-align: center;
   position: relative;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 25px;
+  z-index: 0;
+}
+
+.header {
+  font-family: "Zilla Slab Highlight", cursive;
+  margin: 50px 0 50px 0 !important;
 }
 
 .container {
   margin: 50px;
+  background: rgb(255, 249, 66);
+  color: black;
+  border-radius: 20px;
+  z-index: -2;
+  padding-bottom: 50px;
 }
 
 .btn-info {
   margin: 15px;
 }
 
-h1 {
-  margin: 50px 0 50px 0 !important;
-}
-
-img {
+.random-img {
   max-width: 300px;
   margin-bottom: 40px;
   border-radius: 50%;
 }
 
-img:active {
+.random-img:active {
   -webkit-mask-box-image: url(https://whatemoji.org/wp-content/uploads/2020/07/Growing-Heart-Emoji.png)
     5 stretch;
 }
 
-img:hover {
+.random-img:hover {
   border-color: #dd2e44;
   box-shadow: 0 0 30px #dd2e44;
 }
