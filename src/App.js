@@ -20,7 +20,12 @@ const App = () => {
             <Random headerText={headerText} setHeaderText={setHeaderText} />
           }
         />
-        <Route path="/recipe/:foodId" element={<Recipe  />} />
+        <Route
+          path="/recipe/:foodId"
+          element={
+            <Recipe headerText={headerText} setHeaderText={setHeaderText} />
+          }
+        />
         <Route path="/test" element={<HamburgerMenu />} />
       </Routes>
     </div>

@@ -1,10 +1,15 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Header from "../Header";
 
-const Recipe = () => {
+const Recipe = (props) => {
   const foodId = useParams().foodId;
   let [recipe, setRecipe] = useState([]);
+  let [ingredientsList, setIngredientsList] = useState();
+  let [instructionsList, setInstructionsList] = useState();
 
   useEffect(() => {
     axios
@@ -37,7 +42,73 @@ const Recipe = () => {
         console.log(err);
       });
   }, []);
-  return <div></div>;
+
+  useEffect(() => {
+    // check if recipe not empty (have information about dish)
+    if (Object.keys(recipe).length !== 0) {
+      props.setHeaderText(`${recipe.foodName}`);
+
+      const ingredients = recipe.foodIngredient.map((ingredient, index) => {
+        return <li key={index}>{ingredient}</li>;
+      });
+      setIngredientsList(ingredients);
+
+      const instructions = recipe.foodInstructions.map((step, index) => {
+        return <li key={index}>{step}</li>;
+      });
+      setInstructionsList(instructions);
+    }
+  }, [recipe]);
+
+  return (
+    <Container>
+      <Row>
+        <Header headerText={props.headerText}></Header>
+      </Row>
+      <Row>
+        <p>
+          <strong>Category: </strong>
+          {recipe.foodCategory}
+        </p>
+      </Row>
+      <Row>
+        <p>
+          <strong>Country: </strong>
+          {recipe.foodCountry}
+        </p>
+      </Row>
+      <Row>
+        <Row>
+          <p>
+            <strong>Ingredients: </strong>
+          </p>
+        </Row>
+        <Row>
+          <ol>{ingredientsList}</ol>
+        </Row>
+      </Row>
+      <Row>
+        <Row>
+          <p>
+            <strong>Instructions: </strong>
+          </p>
+        </Row>
+        <Row>
+          <ol>{instructionsList}</ol>
+        </Row>
+      </Row>
+      {recipe.foodYoutubeLink ? (
+        <Row>
+          <p>
+            <strong>More details: </strong>
+            <a href={recipe.foodYoutubeLink} target="_blank">
+              {recipe.foodYoutubeLink}
+            </a>
+          </p>
+        </Row>
+      ) : null}
+    </Container>
+  );
 };
 
 export default Recipe;
