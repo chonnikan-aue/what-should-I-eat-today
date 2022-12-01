@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Header from "../Header";
+import ReactPlayer from "react-player";
 
 const Recipe = (props) => {
   const foodId = useParams().foodId;
@@ -77,6 +78,13 @@ const Recipe = (props) => {
           {recipe.foodCountry}
         </p>
       </Row>
+      {recipe.foodYoutubeLink ? (
+        <Row>
+          <div>
+            <ReactPlayer url={recipe.foodYoutubeLink} />
+          </div>
+        </Row>
+      ) : null}
       <Row>
         <Row>
           <p>
@@ -97,16 +105,6 @@ const Recipe = (props) => {
           <ol>{instructionsList}</ol>
         </Row>
       </Row>
-      {recipe.foodYoutubeLink ? (
-        <Row>
-          <p>
-            <strong>More details: </strong>
-            <a href={recipe.foodYoutubeLink} target="_blank">
-              {recipe.foodYoutubeLink}
-            </a>
-          </p>
-        </Row>
-      ) : null}
     </Container>
   );
 };
