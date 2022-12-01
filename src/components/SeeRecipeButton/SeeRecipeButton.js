@@ -11,7 +11,7 @@ const SeeRecipeButton = (props) => {
   return (
     <Link to={`/recipe/${props.chosenFood.foodId}`}>
       <Button className="see-recipe-btn" type="button" variant="info" size="lg">
-        See Recipe
+        <font>See Recipe</font>
       </Button>
     </Link>
   );

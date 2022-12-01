@@ -52,7 +52,7 @@ const Food = (props) => {
   };
 
   return (
-    <div>
+    <div className="mat">
       {food ? (
         <img
           className="random-img"

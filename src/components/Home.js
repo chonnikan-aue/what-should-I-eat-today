@@ -15,7 +15,7 @@ const Home = (props) => {
         <div>
           <Link to="/random">
             <Button type="button" variant="info" size="lg">
-              Random me anything!
+              <font>Random me anything!</font>
             </Button>
           </Link>
         </div>
@@ -24,7 +24,7 @@ const Home = (props) => {
         <div>
           <Link to="/category">
             <Button type="button" variant="info" size="lg">
-              I want to eat...
+              <font>I want to eat...</font>
             </Button>
           </Link>
         </div>
