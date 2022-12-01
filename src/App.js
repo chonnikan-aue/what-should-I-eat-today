@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Random from "./components/Random";
 import Home from "./components/Home";
 import HamburgerMenu from "./components/HamburgerMenu/HamburgerMenu";
@@ -14,6 +14,8 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home headerText={headerText} />} />
+        <Route path="/home" element={<Navigate to="/" />}></Route>
+        <Route path="/index" element={<Navigate to="/" />}></Route>
         <Route
           path="/random"
           element={
