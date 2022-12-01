@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Header from "../Header";
-import ReactPlayer from "react-player";
+import Ratio from "react-bootstrap/Ratio";
+import "./Recipe.css";
 
 const Recipe = (props) => {
   const foodId = useParams().foodId;
@@ -80,9 +81,16 @@ const Recipe = (props) => {
       </Row>
       {recipe.foodYoutubeLink ? (
         <Row>
-          <div>
-            <ReactPlayer url={recipe.foodYoutubeLink} />
-          </div>
+          <Ratio aspectRatio="16x9">
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              src={`${recipe.foodYoutubeLink.split("watch?v=")[0]}embed/${
+                recipe.foodYoutubeLink.split("watch?v=")[1]
+              }`}
+              title={props.headerText}
+              allowFullScreen
+            ></iframe>
+          </Ratio>
         </Row>
       ) : null}
       <Row>
