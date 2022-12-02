@@ -1,8 +1,19 @@
 .categories-img {
-  width: 200px;
+  width: 120px;
   cursor: pointer;
 }
 
 .categories-img:hover {
-  width: 210px;
+  width: 130px;
+}
+
+.countries-img {
+  width: 120px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.countries-img:hover {
+  width: 130px;
+  height: 80px;
 }
