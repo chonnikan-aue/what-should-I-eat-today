@@ -98,7 +98,7 @@ const Categories = (props) => {
   }, [nationalities]);
 
   useEffect(() => {
-    if (nationalities) {
+    if (nationalities && matchedFlagWithNationality) {
       if (matchedFlagWithNationality.length === nationalities.length) {
         let countries = matchedFlagWithNationality.map((country, index) => {
           return (

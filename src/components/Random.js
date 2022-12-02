@@ -10,6 +10,8 @@ const Random = (props) => {
   const filter = useParams().filter;
   const categoryName = useParams().categoryName;
   let [chosenFood, setChosenFood] = useState([]);
+  let [dataLength, setDataLength] = useState();
+  let [dataIndexUsed, setDataIndexUsed] = useState([]);
 
   const randomFood = () => {
     axios
@@ -47,6 +49,8 @@ const Random = (props) => {
             foodName: data.strMeal,
           },
         ]);
+        setDataLength(allData.length);
+        setDataIndexUsed((prevState) => [...prevState, random]);
       })
       .catch((err) => {
         console.log(err);
@@ -73,6 +77,9 @@ const Random = (props) => {
         chosenFood={chosenFood}
         setChosenFood={setChosenFood}
         setHeaderText={props.setHeaderText}
+        dataLength={dataLength}
+        dataIndexUsed={dataIndexUsed}
+        setDataIndexUsed={setDataIndexUsed}
       />
     </Container>
   );

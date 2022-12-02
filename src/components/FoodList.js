@@ -20,6 +20,9 @@ const FoodList = (props) => {
                 foodNum={0}
                 round={round}
                 setRound={setRound}
+                dataLength={props.dataLength}
+                dataIndexUsed={props.dataIndexUsed}
+                setDataIndexUsed={props.setDataIndexUsed}
               ></Food>
               {Object.keys(props.chosenFood[1]).length === 0 ? (
                 <SeeRecipeButton
@@ -37,6 +40,9 @@ const FoodList = (props) => {
                 foodNum={1}
                 round={round}
                 setRound={setRound}
+                dataLength={props.dataLength}
+                dataIndexUsed={props.dataIndexUsed}
+                setDataIndexUsed={props.setDataIndexUsed}
               ></Food>
               {Object.keys(props.chosenFood[0]).length === 0 ? (
                 <SeeRecipeButton

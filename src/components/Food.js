@@ -31,9 +31,18 @@ const Food = (props) => {
       )
       .then((res) => {
         const allData = res.data.meals;
-        const random = Math.floor(Math.random() * allData.length);
-        const data = allData[random];
-        setData(data);
+        let random = Math.floor(Math.random() * props.dataLength);
+        for (let i = 0; i < props.dataLength; i++) {
+          if (props.dataIndexUsed.indexOf(random) === -1) {
+            console.log(props.dataIndexUsed, random);
+            const data = allData[random];
+            setData(data);
+            props.setDataIndexUsed((prevState) => [...prevState, random]);
+            break;
+          } else {
+            random = Math.floor(Math.random() * props.dataLength);
+          }
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -53,7 +62,7 @@ const Food = (props) => {
     props.setChosenFood(
       Object.assign([], props.chosenFood, { [props.foodNum]: food })
     );
-    if (props.round < 6) {
+    if (props.round < Math.min(11, props.dataLength)) {
       props.setChosenFood(
         Object.assign([], props.chosenFood, {
           [indexLeft]: {
