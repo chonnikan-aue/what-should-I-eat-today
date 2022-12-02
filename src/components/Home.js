@@ -13,7 +13,7 @@ const Home = (props) => {
       </Row>
       <Row>
         <div>
-          <Link to="/random">
+          <Link to="/random/all">
             <Button type="button" variant="info" size="lg">
               <font>Random me anything!</font>
             </Button>

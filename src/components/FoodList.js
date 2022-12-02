@@ -6,7 +6,7 @@ import SeeRecipeButton from "./SeeRecipeButton/SeeRecipeButton";
 import { Col } from "react-bootstrap";
 
 const FoodList = (props) => {
-  let [count, setCount] = useState(0);
+  let [round, setRound] = useState(0);
 
   return (
     <Row>
@@ -18,8 +18,8 @@ const FoodList = (props) => {
                 chosenFood={props.chosenFood}
                 setChosenFood={props.setChosenFood}
                 foodNum={0}
-                count={count}
-                setCount={setCount}
+                round={round}
+                setRound={setRound}
               ></Food>
               {Object.keys(props.chosenFood[1]).length === 0 ? (
                 <SeeRecipeButton
@@ -35,8 +35,8 @@ const FoodList = (props) => {
                 chosenFood={props.chosenFood}
                 setChosenFood={props.setChosenFood}
                 foodNum={1}
-                count={count}
-                setCount={setCount}
+                round={round}
+                setRound={setRound}
               ></Food>
               {Object.keys(props.chosenFood[0]).length === 0 ? (
                 <SeeRecipeButton

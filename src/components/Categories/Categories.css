@@ -1,0 +1,8 @@
+.categories-img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.categories-img:hover {
+  width: 210px;
+}

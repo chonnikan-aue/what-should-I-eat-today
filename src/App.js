@@ -6,6 +6,7 @@ import Random from "./components/Random";
 import Home from "./components/Home";
 import HamburgerMenu from "./components/HamburgerMenu/HamburgerMenu";
 import Recipe from "./components/Recipe/Recipe";
+import Categories from "./components/Categories/Categories";
 
 const App = () => {
   let [headerText, setHeaderText] = useState("What should I eat today?");
@@ -17,7 +18,12 @@ const App = () => {
         <Route path="/home" element={<Navigate to="/" />}></Route>
         <Route path="/index" element={<Navigate to="/" />}></Route>
         <Route
-          path="/random"
+          path="/categories"
+          element={<Categories headerText={headerText} />}
+        />
+        <Route path="/category" element={<Navigate to="/categories" />}></Route>
+        <Route
+          path="/random/:filter/:categoryName"
           element={
             <Random headerText={headerText} setHeaderText={setHeaderText} />
           }

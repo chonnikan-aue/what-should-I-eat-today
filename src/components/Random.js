@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import { useState } from "react";
 import axios from "axios";
 import FoodList from "./FoodList";
+import { useParams } from "react-router-dom";
 
 const Random = (props) => {
+  const filter = useParams().filter;
+  const categoryName = useParams().categoryName;
   let [chosenFood, setChosenFood] = useState([]);
   const randomFood = () => {
     axios
@@ -27,9 +29,37 @@ const Random = (props) => {
       });
   };
 
+  const randomSpecificFood = () => {
+    axios
+      .get(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?${filter}=${categoryName}`
+      )
+      .then((res) => {
+        const allData = res.data.meals;
+        const random = Math.floor(Math.random() * allData.length);
+        const data = allData[random];
+        setChosenFood((prevState) => [
+          ...prevState,
+          {
+            foodId: data.idMeal,
+            foodPic: data.strMealThumb,
+            foodName: data.strMeal,
+          },
+        ]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
-    randomFood();
-    randomFood();
+    if (filter === "all") {
+      randomFood();
+      randomFood();
+    } else {
+      randomSpecificFood();
+      randomSpecificFood();
+    }
   }, []);
 
   return (

@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const Food = (props) => {
+  const filter = useParams().filter;
+  const categoryName = useParams().categoryName;
   let food = props.chosenFood[props.foodNum];
   let indexLeft = [0, 1].filter((num) => {
     return num !== props.foodNum;
@@ -21,16 +24,36 @@ const Food = (props) => {
       });
   };
 
+  const randomSpecificFoodTemp = () => {
+    axios
+      .get(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?${filter}=${categoryName}`
+      )
+      .then((res) => {
+        const allData = res.data.meals;
+        const random = Math.floor(Math.random() * allData.length);
+        const data = allData[random];
+        setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
-    randomFoodTemp();
+    if (filter === "all") {
+      randomFoodTemp();
+    } else {
+      randomSpecificFoodTemp();
+    }
   }, []);
 
   const selectedFood = () => {
-    props.setCount(props.count + 1);
+    props.setRound(props.round + 1);
     props.setChosenFood(
       Object.assign([], props.chosenFood, { [props.foodNum]: food })
     );
-    if (props.count < 6) {
+    if (props.round < 6) {
       props.setChosenFood(
         Object.assign([], props.chosenFood, {
           [indexLeft]: {
@@ -40,7 +63,11 @@ const Food = (props) => {
           },
         })
       );
-      randomFoodTemp();
+      if (filter === "all") {
+        randomFoodTemp();
+      } else {
+        randomSpecificFoodTemp();
+      }
     } else {
       props.setChosenFood(
         Object.assign([], props.chosenFood, {
