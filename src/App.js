@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -11,15 +11,26 @@ import Categories from "./components/Categories/Categories";
 const App = () => {
   let [headerText, setHeaderText] = useState("What should I eat today?");
 
+  useEffect(() => {
+    setHeaderText("What should I eat today?");
+  }, []);
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home headerText={headerText} />} />
+        <Route
+          path="/"
+          element={
+            <Home headerText={headerText} setHeaderText={setHeaderText} />
+          }
+        />
         <Route path="/home" element={<Navigate to="/" />}></Route>
         <Route path="/index" element={<Navigate to="/" />}></Route>
         <Route
           path="/categories"
-          element={<Categories headerText={headerText} />}
+          element={
+            <Categories headerText={headerText} setHeaderText={setHeaderText} />
+          }
         />
         <Route path="/category" element={<Navigate to="/categories" />}></Route>
         <Route

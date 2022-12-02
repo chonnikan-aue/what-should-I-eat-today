@@ -9,11 +9,12 @@ const Categories = (props) => {
   let [categoriesDiv, setCategoriesDiv] = useState();
   let [countriesDiv, setCountriesDiv] = useState();
   let [nationalities, setNationalities] = useState();
-  let [matchedFlagWithNationality, setmatchedFlagWithNationality] = useState(
+  let [matchedFlagWithNationality, setMatchedFlagWithNationality] = useState(
     []
   );
 
   useEffect(() => {
+    props.setHeaderText("What should I eat today?");
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
       .then((res) => {
@@ -77,7 +78,7 @@ const Categories = (props) => {
             axios
               .get(`https://restcountries.com/v3.1/alpha/${countryCode}`)
               .then((res) => {
-                setmatchedFlagWithNationality((prevState) => [
+                setMatchedFlagWithNationality((prevState) => [
                   ...prevState,
                   {
                     nationality: nationality,

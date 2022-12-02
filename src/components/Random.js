@@ -10,6 +10,7 @@ const Random = (props) => {
   const filter = useParams().filter;
   const categoryName = useParams().categoryName;
   let [chosenFood, setChosenFood] = useState([]);
+
   const randomFood = () => {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/random.php")
@@ -53,6 +54,7 @@ const Random = (props) => {
   };
 
   useEffect(() => {
+    props.setHeaderText("What should I eat today?");
     if (filter === "all") {
       randomFood();
       randomFood();
