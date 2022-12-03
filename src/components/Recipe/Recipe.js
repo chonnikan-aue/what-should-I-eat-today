@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Header from "../Header";
 import "./Recipe.css";
-import { Container, Col, Row, Button, Ratio } from "react-bootstrap";
+import { Container, Col, Row, Button, Ratio, Alert } from "react-bootstrap";
 
 const Recipe = (props) => {
   const foodId = useParams().foodId;
@@ -89,7 +89,9 @@ const Recipe = (props) => {
             ></iframe>
           </Ratio>
         </Row>
-      ) : null}
+      ) : (
+        <Alert variant="dark">No video for this recipe!</Alert>
+      )}
       <Row id="recipe-detail">
         <Col>
           <Row>
