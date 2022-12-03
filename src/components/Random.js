@@ -10,7 +10,7 @@ const Random = (props) => {
   const filter = useParams().filter;
   const categoryName = useParams().categoryName;
   let [chosenFood, setChosenFood] = useState([]);
-  let [dataLength, setDataLength] = useState();
+  let [dataLength, setDataLength] = useState(8);
   let [dataIndexUsed, setDataIndexUsed] = useState([]);
 
   const randomFood = () => {
