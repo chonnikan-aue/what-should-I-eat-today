@@ -34,8 +34,15 @@ img {
   margin: 50px 0 50px 0 !important;
 }
 
+.container-col {
+  padding-left: 0 !important;
+  margin-left: 0;
+}
+
 .container {
-  margin: 80px 50px 0 50px;
+  box-sizing: content-box;
+  width: 100% !important;
+  margin: 80px 50px 0 0 !important;
   background: #dbe5fa;
   color: black;
   border-radius: 20px;
@@ -79,7 +86,7 @@ font {
 
 a {
   text-decoration: none !important;
-  color: black !important;
+  color: #512e02 !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
