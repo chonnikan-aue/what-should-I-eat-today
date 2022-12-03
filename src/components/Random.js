@@ -3,7 +3,7 @@ import Header from "./Header";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import axios from "axios";
-import FoodList from "./FoodList";
+import FoodList from "./FoodList/FoodList";
 import { useParams } from "react-router-dom";
 
 const Random = (props) => {

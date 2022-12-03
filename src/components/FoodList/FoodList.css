@@ -1,0 +1,4 @@
+.food-col {
+  flex: auto !important;
+  width: fit-content;
+}

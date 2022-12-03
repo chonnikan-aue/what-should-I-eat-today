@@ -1,9 +1,8 @@
-import React from "react";
-import Food from "./Food";
-import Row from "react-bootstrap/Row";
-import { useState } from "react";
-import SeeRecipeButton from "./SeeRecipeButton/SeeRecipeButton";
-import { Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Col, Row } from "react-bootstrap";
+import "./FoodList.css";
+import Food from "../Food";
+import SeeRecipeButton from "../SeeRecipeButton/SeeRecipeButton";
 
 const FoodList = (props) => {
   let [round, setRound] = useState(0);
@@ -11,9 +10,9 @@ const FoodList = (props) => {
   return (
     <Row>
       {props.chosenFood[0] && props.chosenFood[1] ? (
-        <Row>
+        <>
           {Object.keys(props.chosenFood[0]).length !== 0 ? (
-            <Col>
+            <Col className="food-col">
               <Food
                 chosenFood={props.chosenFood}
                 setChosenFood={props.setChosenFood}
@@ -33,7 +32,7 @@ const FoodList = (props) => {
             </Col>
           ) : null}
           {Object.keys(props.chosenFood[1]).length !== 0 ? (
-            <Col>
+            <Col className="food-col">
               <Food
                 chosenFood={props.chosenFood}
                 setChosenFood={props.setChosenFood}
@@ -52,7 +51,7 @@ const FoodList = (props) => {
               ) : null}
             </Col>
           ) : null}
-        </Row>
+        </>
       ) : null}
     </Row>
   );
