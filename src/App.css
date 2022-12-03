@@ -35,13 +35,15 @@ img {
 }
 
 .container {
-  margin: 50px 50px 0 50px;
+  margin: 80px 50px 0 50px;
   background: #dbe5fa;
   color: black;
   border-radius: 20px;
   z-index: -2;
   padding-bottom: 50px;
-  min-height: calc(100vh - 50px);
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  min-height: calc(100vh - 80px);
 }
 
 .btn-info {

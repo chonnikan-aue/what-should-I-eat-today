@@ -102,7 +102,7 @@ const Categories = (props) => {
       if (matchedFlagWithNationality.length === nationalities.length) {
         let countries = matchedFlagWithNationality.map((country, index) => {
           return (
-            <Col key={index} className="categories-col">
+            <Col key={index} className="countries-col">
               <Link to={`/random/a/${country.nationality}`}>
                 <div className="mat">
                   <img
@@ -130,6 +130,9 @@ const Categories = (props) => {
         <h2>Categories</h2>
       </Row>
       <Row>{categoriesDiv}</Row>
+      <Row>
+        <hr />
+      </Row>
       <Row>
         <h2>Country</h2>
       </Row>
