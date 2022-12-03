@@ -74,6 +74,7 @@ font {
 }
 
 .mat {
+  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
   -webkit-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
   -moz-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
   -ms-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
