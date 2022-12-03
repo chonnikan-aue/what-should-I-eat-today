@@ -37,16 +37,18 @@ img {
 .container-col {
   padding-left: 0 !important;
   margin-left: 0;
+  margin-right: 0;
+  padding-right: 0 !important;
 }
 
 .container {
-  box-sizing: content-box;
   width: 100% !important;
-  margin: 80px 50px 0 0 !important;
+  margin-top: 80px;
+  margin-left: 0 !important;
+  margin-right: 140px !important;
   background: #dbe5fa;
   color: black;
   border-radius: 20px;
-  z-index: -2;
   padding-bottom: 50px;
   padding-left: 50px !important;
   padding-right: 50px !important;
@@ -103,5 +105,17 @@ a {
   }
   to {
     max-width: 310px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: calc(100vw - 140px) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .menu-nav {
+    margin-right: 0;
   }
 }

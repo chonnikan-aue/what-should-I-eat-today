@@ -1,6 +1,7 @@
 .hamburger-col {
-  margin: 0;
-  padding: 120px 0 0 50px !important;
+  padding-top: 120px !important;
+  padding-left: 70px !important;
+  padding-right: 0 !important;
   position: sticky;
   position: -webkit-sticky;
   top: 30px;
