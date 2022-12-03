@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Row>
+      <Row className="app-row">
         <HamburgerMenu></HamburgerMenu>
         <Col className="container-col">
           <Routes>

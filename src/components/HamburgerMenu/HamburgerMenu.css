@@ -1,10 +1,12 @@
 .hamburger-col {
-  padding-top: 120px !important;
+  width: fit-content;
+  height: fit-content;
+  margin-top: 120px !important;
   padding-left: 70px !important;
   padding-right: 0 !important;
   position: sticky;
   position: -webkit-sticky;
-  top: 30px;
+  top: 40px;
 }
 
 .menu-nav {
@@ -34,4 +36,17 @@
 svg {
   padding-top: 15px;
   vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-nav {
+    margin-right: 0 !important;
+  }
+
+  .hamburger-col {
+    padding-top: 70px !important;
+    padding-left: 20px !important;
+    float: left;
+    top: 160px;
+  }
 }
