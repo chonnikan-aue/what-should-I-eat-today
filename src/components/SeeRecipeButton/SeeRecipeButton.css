@@ -1,5 +1,6 @@
 .see-recipe-btn {
   position: absolute;
   top: 50%;
-  transform: translatex(-60%);
+  transform: translatex(-55%);
+  font-size: 30px !important;
 }

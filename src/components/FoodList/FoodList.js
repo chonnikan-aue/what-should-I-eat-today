@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import "./FoodList.css";
-import Food from "../Food";
+import Food from "../Food/Food";
 import SeeRecipeButton from "../SeeRecipeButton/SeeRecipeButton";
 
 const FoodList = (props) => {

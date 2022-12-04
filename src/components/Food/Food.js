@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "./Food.css";
 
 const Food = (props) => {
   const filter = useParams().filter;
