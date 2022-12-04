@@ -10,8 +10,37 @@ const Recipe = (props) => {
   let [recipe, setRecipe] = useState([]);
   let [ingredientsList, setIngredientsList] = useState();
   let [instructionsList, setInstructionsList] = useState();
+  let [favorite, setFavorite] = useState(false);
+
+  const handleFavorite = () => {
+    setFavorite(!favorite);
+  };
 
   useEffect(() => {
+    if (Object.keys(recipe).length !== 0) {
+      if (favorite) {
+        localStorage.setItem(
+          foodId,
+          JSON.stringify({
+            foodId: foodId,
+            foodName: recipe.foodName,
+            foodPic: recipe.foodPic,
+            foodCategory: recipe.foodCategory,
+            foodCountry: recipe.foodCountry,
+          })
+        );
+      } else {
+        localStorage.removeItem(foodId);
+      }
+    }
+  }, [favorite]);
+
+  useEffect(() => {
+    if (localStorage.getItem(foodId)) {
+      setFavorite(true);
+    } else {
+      setFavorite(false);
+    }
     props.activeNav(props.hamburger);
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
@@ -65,21 +94,31 @@ const Recipe = (props) => {
     <Container>
       <img id="recipe-img" src={recipe.foodPic} alt={recipe.foodName} />
       <Row className="favorite-recipe-row">
-        <img
-          id="favorite-recipe-icon"
-          src="https://clipartcraft.com/images/clipart-heart-outline-4.png"
-          alt="favorite recipe icon"
-        />
+        {favorite ? (
+          <img
+            id="favorite-recipe-icon"
+            src="https://assets.webiconspng.com/uploads/2017/09/Heart-PNG-Image-33152.png"
+            alt="unfavorite recipe icon"
+            onClick={handleFavorite}
+          />
+        ) : (
+          <img
+            id="favorite-recipe-icon"
+            src="https://clipartcraft.com/images/clipart-heart-outline-4.png"
+            alt="favorite recipe icon"
+            onClick={handleFavorite}
+          />
+        )}
       </Row>
       <Row className="recipe-header">
         <Header headerText={props.headerText}></Header>
       </Row>
       <Row>
-        <p className="recipe-btn-container">
-          <Button className="recipe-btn" type="button" variant="dark">
+        <p className="tag-btn-container">
+          <Button className="tag-btn" type="button" variant="dark">
             {recipe.foodCategory}
           </Button>
-          <Button className="recipe-btn" stype="button" variant="dark">
+          <Button className="tag-btn" stype="button" variant="dark">
             {recipe.foodCountry}
           </Button>
         </p>

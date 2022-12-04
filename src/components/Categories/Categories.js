@@ -131,9 +131,7 @@ const Categories = (props) => {
         <h2>Categories</h2>
       </Row>
       <Row>{categoriesDiv}</Row>
-      <Row>
-        <hr />
-      </Row>
+      <Row className="categories-hr"></Row>
       <Row>
         <h2>Countries</h2>
       </Row>

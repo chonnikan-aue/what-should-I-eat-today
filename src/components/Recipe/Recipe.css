@@ -24,32 +24,19 @@
   border-radius: 20px;
 }
 
-.recipe-btn {
-  margin-left: 20px;
-  font-size: 22px !important;
-  cursor: default !important;
-}
-
-.recipe-btn:hover {
-  background-color: var(--bs-btn-bg);
-  border-color: var(--bs-btn-border-color);
-}
-
-.recipe-btn:active {
-  background-color: var(--bs-btn-bg) !important;
-  border-color: var(--bs-btn-border-color) !important;
-}
-
-.recipe-btn-container {
-  text-align: left;
-}
-
 #favorite-recipe-icon {
   margin-top: 40px;
-  width: 50px;
+  width: 90px;
   cursor: pointer;
 }
 
 .favorite-recipe-row {
-  justify-content: right;
+  float: right;
+}
+
+@media only screen and (max-width: 768px) {
+  #favorite-recipe-icon {
+    margin-top: 15px;
+    width: 50px;
+  }
 }

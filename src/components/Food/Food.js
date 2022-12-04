@@ -35,7 +35,6 @@ const Food = (props) => {
         let random = Math.floor(Math.random() * props.dataLength);
         for (let i = 0; i < props.dataLength; i++) {
           if (props.dataIndexUsed.indexOf(random) === -1) {
-            console.log(props.dataIndexUsed, random);
             const data = allData[random];
             setData(data);
             props.setDataIndexUsed((prevState) => [...prevState, random]);

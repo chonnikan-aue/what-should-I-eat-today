@@ -14,7 +14,7 @@ html {
   height: 0;
 }
 
-.App {
+.app {
   background: #eebf5b;
   text-align: center;
   position: relative;
@@ -70,6 +70,11 @@ a {
   height: 70px;
   font-size: 50px;
   color: #512e02;
+  cursor: pointer;
+}
+
+.menu-nav:first-child {
+  cursor: default;
 }
 
 .hamburger-icon {
@@ -86,6 +91,36 @@ a {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: #dbe5fa;
+}
+
+.mat {
+  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
+  -webkit-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
+  -moz-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
+  -ms-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
+  -o-filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 1));
+}
+
+.tag-btn-container {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.tag-btn {
+  margin-left: 20px;
+  font-size: 22px !important;
+  cursor: default !important;
+  margin-bottom: 10px;
+}
+
+.tag-btn:hover {
+  background-color: var(--bs-btn-bg);
+  border-color: var(--bs-btn-border-color);
+}
+
+.tag-btn:active {
+  background-color: var(--bs-btn-bg) !important;
+  border-color: var(--bs-btn-border-color) !important;
 }
 
 @media only screen and (max-width: 768px) {

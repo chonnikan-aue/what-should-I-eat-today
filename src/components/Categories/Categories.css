@@ -27,8 +27,8 @@
   margin-bottom: 0;
 }
 
-hr {
-  border-top: 8px dotted #ffae00;
+.categories-hr {
+  border-top: 8px dotted #eebf5b;
   margin: 30px 0 30px 0 !important;
 }
 

@@ -34,7 +34,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       <Row className="app-row">
         <Col md="auto" className="hamburger-col">
           <Col className="menu-nav" ref={hamburger}>
