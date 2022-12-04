@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import axios from "axios";
-import FoodList from "./FoodList/FoodList";
 import { useParams } from "react-router-dom";
+import { Container, Row } from "react-bootstrap";
+import axios from "axios";
+import FoodList from "../FoodList/FoodList";
+import Header from "../Header/Header";
 
 const Random = (props) => {
   const filter = useParams().filter;
@@ -59,6 +58,7 @@ const Random = (props) => {
 
   useEffect(() => {
     props.setHeaderText("What should I eat today?");
+    props.activeNav(props.randomAll);
     if (filter === "all") {
       randomFood();
       randomFood();

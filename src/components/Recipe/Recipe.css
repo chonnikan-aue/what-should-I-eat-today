@@ -5,11 +5,11 @@
   margin-bottom: 20px;
 }
 
-#recipe-header {
+.recipe-header {
   margin-bottom: -30px;
 }
 
-#recipe-detail {
+.recipe-detail {
   text-align: left;
   margin-left: 50px;
   margin-right: 50px;
@@ -42,4 +42,14 @@
 
 .recipe-btn-container {
   text-align: left;
+}
+
+#favorite-recipe-icon {
+  margin-top: 40px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.favorite-recipe-row {
+  justify-content: right;
 }

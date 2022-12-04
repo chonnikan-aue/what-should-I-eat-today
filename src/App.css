@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Zilla+Slab+Highlight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
 
 html {
   background: #eebf5b;
@@ -26,11 +26,6 @@ html {
 img {
   width: 100%;
   height: auto;
-}
-
-.header {
-  font-family: "Zilla Slab Highlight", cursive;
-  margin: 50px 0 50px 0 !important;
 }
 
 .container-col {
@@ -77,6 +72,11 @@ a {
   color: #512e02;
 }
 
+.hamburger-icon {
+  padding-top: 15px;
+  vertical-align: top;
+}
+
 .active {
   width: 70px;
   height: 70px;
@@ -86,17 +86,6 @@ a {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   background-color: #dbe5fa;
-}
-
-.sub-nav {
-  width: 70px;
-  height: 70px;
-  font-size: 50px;
-}
-
-svg {
-  padding-top: 15px;
-  vertical-align: top !important;
 }
 
 @media only screen and (max-width: 768px) {

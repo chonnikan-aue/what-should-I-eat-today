@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Header from "../Header";
 import "./Home.css";
+import Header from "../Header/Header";
 
 const Home = (props) => {
   useEffect(() => {
     props.setHeaderText("What should I eat today?");
+    props.activeNav(props.home);
   }, []);
 
   return (
@@ -15,26 +16,23 @@ const Home = (props) => {
         <Header headerText={props.headerText}></Header>
       </Row>
       <Row>
-        <Link
-          to="/random/all/all"
-          onClick={() => {
-            props.activeNav(props.randomAll);
-          }}
-        >
+        <Link to="/random/all/all">
           <Button className="home-btn" type="button" variant="dark">
             Random me anything!
           </Button>
         </Link>
       </Row>
       <Row>
-        <Link
-          to="/categories"
-          onClick={() => {
-            props.activeNav(props.categories);
-          }}
-        >
+        <Link to="/categories">
           <Button className="home-btn" type="button" variant="dark">
             I want to eat...
+          </Button>
+        </Link>
+      </Row>
+      <Row>
+        <Link to="/favorites">
+          <Button className="home-btn" type="button" variant="dark">
+            My favorites ❤
           </Button>
         </Link>
       </Row>

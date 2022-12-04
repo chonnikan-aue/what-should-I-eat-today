@@ -3,3 +3,11 @@
   margin-bottom: 30px;
   font-size: 25px !important;
 }
+
+.home-btn:hover:before {
+  content: "> ";
+}
+
+.home-btn:hover:after {
+  content: " <";
+}

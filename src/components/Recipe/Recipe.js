@@ -1,9 +1,9 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../Header";
-import "./Recipe.css";
 import { Container, Col, Row, Button, Ratio, Alert } from "react-bootstrap";
+import axios from "axios";
+import "./Recipe.css";
+import Header from "../Header/Header";
 
 const Recipe = (props) => {
   const foodId = useParams().foodId;
@@ -12,6 +12,7 @@ const Recipe = (props) => {
   let [instructionsList, setInstructionsList] = useState();
 
   useEffect(() => {
+    props.activeNav(props.hamburger);
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId}`)
       .then((res) => {
@@ -63,7 +64,14 @@ const Recipe = (props) => {
   return (
     <Container>
       <img id="recipe-img" src={recipe.foodPic} alt={recipe.foodName} />
-      <Row id="recipe-header">
+      <Row className="favorite-recipe-row">
+        <img
+          id="favorite-recipe-icon"
+          src="https://clipartcraft.com/images/clipart-heart-outline-4.png"
+          alt="favorite recipe icon"
+        />
+      </Row>
+      <Row className="recipe-header">
         <Header headerText={props.headerText}></Header>
       </Row>
       <Row>
@@ -92,7 +100,7 @@ const Recipe = (props) => {
       ) : (
         <Alert variant="dark">No video for this recipe!</Alert>
       )}
-      <Row id="recipe-detail">
+      <Row className="recipe-detail">
         <Col>
           <Row>
             <p>

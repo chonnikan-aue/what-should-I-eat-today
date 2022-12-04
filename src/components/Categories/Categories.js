@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import axios from "axios";
-import Header from "../Header";
-import "./Categories.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import "./Categories.css";
+import Header from "../Header/Header";
 
 const Categories = (props) => {
   let [categoriesDiv, setCategoriesDiv] = useState();
@@ -15,6 +15,7 @@ const Categories = (props) => {
 
   useEffect(() => {
     props.setHeaderText("What should I eat today?");
+    props.activeNav(props.categories);
     axios
       .get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
       .then((res) => {
@@ -134,7 +135,7 @@ const Categories = (props) => {
         <hr />
       </Row>
       <Row>
-        <h2>Country</h2>
+        <h2>Countries</h2>
       </Row>
       <Row>{countriesDiv}</Row>
     </Container>
