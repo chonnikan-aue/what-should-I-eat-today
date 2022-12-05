@@ -127,15 +127,19 @@ const Categories = (props) => {
       <Row>
         <Header headerText={props.headerText}></Header>
       </Row>
-      <Row>
-        <h2>Categories</h2>
+      <Row className="dotted-border">
+        <Row>
+          <h2 className="underline-h2">Categories</h2>
+        </Row>
+        <Row>{categoriesDiv}</Row>
       </Row>
-      <Row>{categoriesDiv}</Row>
-      <Row className="categories-hr"></Row>
-      <Row>
-        <h2>Countries</h2>
+      {/* <Row className="categories-hr"></Row> */}
+      <Row className="dotted-border">
+        <Row>
+          <h2 className="underline-h2">Countries</h2>
+        </Row>
+        <Row>{countriesDiv}</Row>
       </Row>
-      <Row>{countriesDiv}</Row>
     </Container>
   );
 };

@@ -24,10 +24,10 @@ const Favorites = (props) => {
             </Col>
             <Col>
               <Row md="auto" className="favorites-food-name-row">
-                <h1 className="favorites-food-name-h1">{itemObj.foodName}</h1>
+                <h2 className="favorites-food-name">{itemObj.foodName}</h2>
               </Row>
               <Row>
-                <p className="tag-btn-container">
+                <p className="tag-btn-container remove-margin-top">
                   <Button className="tag-btn" type="button" variant="dark">
                     {itemObj.foodCategory}
                   </Button>

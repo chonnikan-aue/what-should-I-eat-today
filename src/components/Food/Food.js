@@ -62,7 +62,7 @@ const Food = (props) => {
     props.setChosenFood(
       Object.assign([], props.chosenFood, { [props.foodNum]: food })
     );
-    if (props.round < Math.min(8, props.dataLength)) {
+    if (props.round < Math.min(8, props.dataLength - 2)) {
       props.setChosenFood(
         Object.assign([], props.chosenFood, {
           [indexLeft]: {

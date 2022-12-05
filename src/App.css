@@ -16,6 +16,7 @@ html {
 
 .app {
   background: #eebf5b;
+  color: #512e02;
   text-align: center;
   position: relative;
   font-family: "Nanum Pen Script", cursive;
@@ -41,7 +42,6 @@ img {
   margin-left: 0 !important;
   margin-right: 140px !important;
   background: #dbe5fa;
-  color: black;
   border-radius: 20px;
   padding-bottom: 50px;
   padding-left: 50px !important;
@@ -123,6 +123,19 @@ a {
   border-color: var(--bs-btn-border-color) !important;
 }
 
+.dotted-border {
+  border: 8px dotted #eebf5b;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.underline-h2 {
+  font-family: "Nanum Pen Script", cursive;
+  text-decoration: underline;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     width: calc(100vw - 90px) !important;
@@ -146,5 +159,8 @@ a {
     padding-left: 20px !important;
     float: left;
     top: 160px;
+  }
+  .tag-btn-container {
+    margin-top: 30px;
   }
 }

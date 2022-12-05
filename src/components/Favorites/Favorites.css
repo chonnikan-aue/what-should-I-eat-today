@@ -24,13 +24,24 @@
 
 .favorites-food-name-row {
   width: fit-content;
-  padding-top: 15px;
-  padding-left: 15px;
-  margin-bottom: 13px;
+  padding-top: 18px;
+  padding-bottom: 13px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
-.favorites-food-name-h1 {
+.favorites-food-name {
   width: fit-content;
   padding: 0;
   margin: 0;
+}
+
+.remove-margin-top {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .favorites-food-name {
+    font-size: calc(1.375rem + 1.5vw);
+  }
 }

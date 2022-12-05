@@ -139,22 +139,21 @@ const Recipe = (props) => {
       ) : (
         <Alert variant="dark">No video for this recipe!</Alert>
       )}
-      <Row className="recipe-detail">
-        <Col>
+      <Row>
+        <Col
+          md="auto"
+          className="dotted-border recipe-detail ingredient-fit-content"
+        >
           <Row>
-            <p>
-              <strong>Ingredients: </strong>
-            </p>
+            <h2 className="underline-h2">Ingredients: </h2>
           </Row>
           <Row>
             <ol>{ingredientsList}</ol>
           </Row>
         </Col>
-        <Col>
+        <Col className="dotted-border recipe-detail">
           <Row>
-            <p>
-              <strong>Instructions: </strong>
-            </p>
+            <h2 className="underline-h2">Instructions: </h2>
           </Row>
           <Row>
             <ol>{instructionsList}</ol>

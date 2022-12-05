@@ -73,14 +73,16 @@ const Random = (props) => {
       <Row>
         <Header headerText={props.headerText} />
       </Row>
-      <FoodList
-        chosenFood={chosenFood}
-        setChosenFood={setChosenFood}
-        setHeaderText={props.setHeaderText}
-        dataLength={dataLength}
-        dataIndexUsed={dataIndexUsed}
-        setDataIndexUsed={setDataIndexUsed}
-      />
+      <Row className="dotted-border">
+        <FoodList
+          chosenFood={chosenFood}
+          setChosenFood={setChosenFood}
+          setHeaderText={props.setHeaderText}
+          dataLength={dataLength}
+          dataIndexUsed={dataIndexUsed}
+          setDataIndexUsed={setDataIndexUsed}
+        />
+      </Row>
     </Container>
   );
 };

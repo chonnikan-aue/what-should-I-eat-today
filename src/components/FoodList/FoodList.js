@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import "./FoodList.css";
 import Food from "../Food/Food";
 import SeeRecipeButton from "../SeeRecipeButton/SeeRecipeButton";
@@ -8,7 +8,7 @@ const FoodList = (props) => {
   let [round, setRound] = useState(0);
 
   return (
-    <Row>
+    <>
       {props.chosenFood[0] && props.chosenFood[1] ? (
         <>
           {Object.keys(props.chosenFood[0]).length !== 0 ? (
@@ -53,7 +53,7 @@ const FoodList = (props) => {
           ) : null}
         </>
       ) : null}
-    </Row>
+    </>
   );
 };
 
