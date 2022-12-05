@@ -33,7 +33,7 @@ const Food = (props) => {
       .then((res) => {
         const allData = res.data.meals;
         let random = Math.floor(Math.random() * props.dataLength);
-        for (let i = 0; i < props.dataLength; i++) {
+        while (true) {
           if (props.dataIndexUsed.indexOf(random) === -1) {
             const data = allData[random];
             setData(data);
