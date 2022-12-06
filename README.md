@@ -8,7 +8,13 @@
 
 - **For designing wire frames:** [wireframe.cc](https://wireframe.cc/)
 
-- **For web development:** React, [React Bootstrap v2.6.0 (Bootstrap 5.2)](https://react-bootstrap.github.io/getting-started/introduction)
+- **For web development:** 
+
+  1. React
+
+  2. [React Bootstrap v2.6.0 (Bootstrap 5.2)](https://react-bootstrap.github.io/getting-started/introduction)
+
+  3. [React Icons](https://react-icons.github.io/react-icons/)
 
 - **For API:**
 
