@@ -12,7 +12,7 @@
 
 - **For API:**
 
-  1. **To random and get meal information:** [TheMealDB](https://www.themealdb.com/api.php)
+  1. **To random and get food information:** [TheMealDB](https://www.themealdb.com/api.php)
 
   2. **To get country code by nationality name:** [G Adventures API](https://developers.gadventures.com/docs/searching.html#searching)
 
