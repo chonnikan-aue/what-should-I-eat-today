@@ -94,13 +94,29 @@ This web works well in lastest version of Chrome browser in desktop and mobile d
 
 **1. First page:**
 
+![image](https://user-images.githubusercontent.com/116629287/205839505-8d57c3c5-00ce-4321-ae4c-de1f9ad4e538.png)
+
 **2. Categories page:** when user click `I want to eat...` button from the first page
 
-**3. Random food page:** when user click `Random me anything!` button from the first page or click a category/country from the categories page
+![image](https://user-images.githubusercontent.com/116629287/205838476-46f88cc1-239b-4aa5-bea7-466ca3a08a02.png)
+
+**3. Random food page:** 
+
+- when user click `Random me anything!` button from the first page or click a category/country from the categories page
+
+![image](https://user-images.githubusercontent.com/116629287/205838622-c5caf309-fa21-41b9-8126-dbf6ea6dd43b.png)
+
+- when user click a random food picture until get the last one
+
+![image](https://user-images.githubusercontent.com/116629287/205838753-f0fbf680-2944-4b1e-a635-d0cdf44a071a.png)
 
 **4. Recipe page:** when user click `See Recipe` button after a food is left the last one
 
+![image](https://user-images.githubusercontent.com/116629287/205839719-5a5becd0-a601-4713-93eb-c87a2a5b1bde.png)
+
 **5. Favorites Page:** when user click `My favorites ❤` button from the first page
+
+![image](https://user-images.githubusercontent.com/116629287/205839927-942486a9-93ac-4c82-8808-8e38b6ff282a.png)
 
 > ### You want to try? [Here you go!](https://chonnikan-aue-what-should-i-eat-today.netlify.app/)
 
