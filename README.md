@@ -1,6 +1,6 @@
 # what should I eat today?
 
-> ### This web will help peaple to decide what to eat
+> ### This web will help people decide what to eat
 
 **Try out here:** https://chonnikan-aue-what-should-i-eat-today.netlify.app/
 
@@ -12,11 +12,11 @@
 
 - **For API:**
 
-1. **To random and get meal information:** [TheMealDB](https://www.themealdb.com/api.php)
+  1. **To random and get meal information:** [TheMealDB](https://www.themealdb.com/api.php)
 
-2. **To get country code by nationality name:** [G Adventures API](https://developers.gadventures.com/docs/searching.html#searching)
+  2. **To get country code by nationality name:** [G Adventures API](https://developers.gadventures.com/docs/searching.html#searching)
 
-3. **To get flag from country code:** [REST Countries](https://restcountries.com/#api-endpoints-v3-code)
+  3. **To get flag from country code:** [REST Countries](https://restcountries.com/#api-endpoints-v3-code)
 
 - **For connect API:** Axios
 
@@ -24,7 +24,7 @@
 
 ## Installation instructions
 
-I recommend lastest version of Chrome browser in desktop, but I designed the responsive web for mobile devices as well.
+This web works well in lastest version of Chrome browser in desktop and mobile devices.
 
 ## Planning
 
@@ -36,7 +36,7 @@ I recommend lastest version of Chrome browser in desktop, but I designed the res
 
 - As a user, I think it would be nice if the web show me the recipe, so I can cook myself
 
-- As a user, maybe I have the category of food that I want to eat but I don't know what exactly menu, so I will make it random from the category
+- As a user, maybe I have the category of food that I want to eat but I don't know what exactly food, so I will make it random from the category
 
 > ### MVP Goals
 
@@ -70,11 +70,25 @@ I recommend lastest version of Chrome browser in desktop, but I designed the res
 
 **1. First page:**
 
+![index](https://user-images.githubusercontent.com/116629287/205813200-23467cd9-2934-4253-92f3-4d28d8cd10c6.JPG)
+
 **2. Categories page:** when user click `I want to eat...` button from the first page
 
-**3. Random food page:** when user click `Random me anything!` button from the first page or click a category/country from the categories page
+![category](https://user-images.githubusercontent.com/116629287/205813295-4e181f78-c71c-49e4-974b-752171f0849f.JPG)
+
+**3. Random food page:** 
+
+- when user click `Random me anything!` button from the first page or click a category/country from the categories page
+
+![pick-random-menu](https://user-images.githubusercontent.com/116629287/205813471-2400b4a1-c0a9-4f4a-9bf8-e09efc960043.JPG)
+
+- when user click a random food picture until get the last one
+
+![chosen-menu](https://user-images.githubusercontent.com/116629287/205814045-d9912762-c925-495d-bcc1-d6e57f85b715.JPG)
 
 **4. Recipe page:** when user click `See Recipe` button after a food is left the last one
+
+![recipe](https://user-images.githubusercontent.com/116629287/205814165-bbef29ea-203a-4f7a-842c-8fea00005304.JPG)
 
 ## Screenshots
 
@@ -88,10 +102,10 @@ I recommend lastest version of Chrome browser in desktop, but I designed the res
 
 **5. Favorites Page:** when user click `My favorites ❤` button from the first page
 
-> ### Want to know more? [Finds out here!](https://chonnikan-aue-what-should-i-eat-today.netlify.app/)
+> ### You want to try? [Here you go!](https://chonnikan-aue-what-should-i-eat-today.netlify.app/)
 
 ## Room for Improvement
 
-- Store favorite food in Database
+- Store favorite foods in Database
 
 - Show nearby restuarants that have this chosen food or have this food category
