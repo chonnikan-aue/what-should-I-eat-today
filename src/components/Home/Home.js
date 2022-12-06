@@ -17,21 +17,21 @@ const Home = (props) => {
       </Row>
       <Row>
         <Link to="/random/all/all">
-          <Button className="home-btn" type="button" variant="dark">
+          <Button className="home-btn" type="button" variant="egg">
             Random me anything!
           </Button>
         </Link>
       </Row>
       <Row>
         <Link to="/categories">
-          <Button className="home-btn" type="button" variant="dark">
+          <Button className="home-btn" type="button" variant="egg">
             I want to eat...
           </Button>
         </Link>
       </Row>
       <Row>
         <Link to="/favorites">
-          <Button className="home-btn" type="button" variant="dark">
+          <Button className="home-btn" type="button" variant="egg">
             My favorites ❤
           </Button>
         </Link>

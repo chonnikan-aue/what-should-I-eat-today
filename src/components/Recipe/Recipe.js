@@ -115,10 +115,10 @@ const Recipe = (props) => {
       </Row>
       <Row>
         <p className="tag-btn-container">
-          <Button className="tag-btn" type="button" variant="dark">
+          <Button className="tag-btn" type="button" variant="egg">
             {recipe.foodCategory}
           </Button>
-          <Button className="tag-btn" stype="button" variant="dark">
+          <Button className="tag-btn" stype="button" variant="egg">
             {recipe.foodCountry}
           </Button>
         </p>

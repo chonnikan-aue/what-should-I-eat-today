@@ -43,6 +43,10 @@
   width: fit-content;
 }
 
+.alert-dark {
+  --bs-alert-color: #512e02;
+}
+
 @media only screen and (max-width: 768px) {
   #favorite-recipe-icon {
     margin-top: 15px;

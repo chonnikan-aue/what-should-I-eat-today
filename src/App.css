@@ -136,6 +136,19 @@ a {
   text-align: left;
 }
 
+.btn-egg {
+  --bs-btn-color:  #512e02;
+  --bs-btn-bg:  #eebf5b;
+  --bs-btn-border-color: #eebf5b;
+  --bs-btn-hover-color:  #512e02;
+  --bs-btn-hover-bg:  #eebf5b;
+  --bs-btn-hover-border-color: #eebf5b;
+  --bs-btn-focus-shadow-rgb: 66,70,73;
+  --bs-btn-active-color: #512e02;
+  --bs-btn-active-bg: #eebf5b;
+  --bs-btn-active-border-color: #eebf5b;
+}
+
 @media only screen and (max-width: 768px) {
   .container {
     width: calc(100vw - 90px) !important;

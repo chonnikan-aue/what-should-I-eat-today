@@ -28,10 +28,10 @@ const Favorites = (props) => {
               </Row>
               <Row>
                 <p className="tag-btn-container remove-margin-top">
-                  <Button className="tag-btn" type="button" variant="dark">
+                  <Button className="tag-btn" type="button" variant="egg">
                     {itemObj.foodCategory}
                   </Button>
-                  <Button className="tag-btn" stype="button" variant="dark">
+                  <Button className="tag-btn" stype="button" variant="egg">
                     {itemObj.foodCountry}
                   </Button>
                 </p>
