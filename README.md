@@ -62,9 +62,9 @@ This web works well in lastest version of Chrome browser in desktop and mobile d
 
 **Second Priority**
 
-- Random food for specific category ([14 categories](https://www.themealdb.com/api/json/v1/1/categories.php))
+- Random food for specific category [(14 categories)](https://www.themealdb.com/api/json/v1/1/categories.php)
 
-- Random food from specific country ([26 countries, not including `unknown`](https://www.themealdb.com/api/json/v1/1/list.php?a=list)
+- Random food from specific country [(26 countries, not including `unknown`)](https://www.themealdb.com/api/json/v1/1/list.php?a=list)
 
 **Third Priority**
 
